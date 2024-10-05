@@ -1,6 +1,6 @@
 # fakecall
 
-A new Flutter project.
+![fakecall](fakecall.avif)
 
 ## Getting Started
 
