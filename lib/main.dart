@@ -31,6 +31,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 ///creat by Mfagri
 Data data = Data();
+//testing git clone
 //this for camera
 late List<CameraDescription> cameras;
 //this for package info
