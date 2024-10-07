@@ -3,6 +3,7 @@
 import 'dart:io';
 import 'dart:ui';
 import 'package:bordered_text/bordered_text.dart';
+import 'package:fakecall/ads_manager/admob/interstitial_ads.dart';
 import 'package:fakecall/model_view/data_provider.dart';
 import 'package:fakecall/view/call/call.dart';
 import 'package:fakecall/view/home/widget/home_item.dart';
@@ -22,6 +23,24 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   final InAppReview inAppReview = InAppReview.instance;
   Future<void> requestReview() => inAppReview.requestReview();
+
+final AdManager _adManager = AdManager();
+
+  @override
+  void initState() {
+    super.initState();
+    _adManager.loadInterstitialAd(); // Load the interstitial ad when the page loads
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
+
+  void _showAd() {
+    _adManager.showInterstitialAd(); // Show the ad when a button is pressed
+  }
+
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
