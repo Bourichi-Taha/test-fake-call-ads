@@ -10,7 +10,8 @@
   "ads": {
     "admob": "true",
     "meta": "false",
-    "unity": "false"
+    "unity": "false",
+    "applovin": "false"
   },
   "intro": [
     {
