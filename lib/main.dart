@@ -28,6 +28,7 @@ import 'package:provider/provider.dart';
 import 'package:camera/camera.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 ///creat by Mfagri
 Data data = Data();
@@ -46,6 +47,7 @@ bool firstTime = false;
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  MobileAds.instance.initialize();
   FlutterForegroundTask.initCommunicationPort();
   packageInfo = await PackageInfo.fromPlatform();
   //read json file from assets

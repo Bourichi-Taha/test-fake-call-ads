@@ -218,6 +218,12 @@
       "languageVersion": "2.14"
     },
     {
+      "name": "google_mobile_ads",
+      "rootUri": "file:///Users/ayeshaamjad/.pub-cache/hosted/pub.dev/google_mobile_ads-2.4.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "html",
       "rootUri": "file:///Users/ayeshaamjad/.pub-cache/hosted/pub.dev/html-0.15.4",
       "packageUri": "lib/",
@@ -674,6 +680,12 @@
       "languageVersion": "3.3"
     },
     {
+      "name": "visibility_detector",
+      "rootUri": "file:///Users/ayeshaamjad/.pub-cache/hosted/pub.dev/visibility_detector-0.3.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "vm_service",
       "rootUri": "file:///Users/ayeshaamjad/.pub-cache/hosted/pub.dev/vm_service-14.2.5",
       "packageUri": "lib/",
@@ -734,7 +746,7 @@
       "languageVersion": "3.4"
     }
   ],
-  "generated": "2024-10-07T17:14:24.942659Z",
+  "generated": "2024-10-07T17:50:35.345747Z",
   "generator": "pub",
   "generatorVersion": "3.5.3",
   "flutterRoot": "file:///Users/ayeshaamjad/Documents/flutter_projects/flutter",

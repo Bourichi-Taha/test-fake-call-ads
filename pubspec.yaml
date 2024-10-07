@@ -53,6 +53,7 @@ dependencies:
   http: ^0.13.0 # Ensure this is compatible with other packages
   win32:
   shared_preferences: ^2.3.2
+  google_mobile_ads: ^2.4.0
 
 dev_dependencies:
   flutter_test:
