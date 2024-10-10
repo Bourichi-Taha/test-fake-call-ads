@@ -29,6 +29,7 @@ import 'package:camera/camera.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:facebook_audience_network/facebook_audience_network.dart';
 
 ///creat by Mfagri
 Data data = Data();
@@ -48,6 +49,7 @@ bool firstTime = false;
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   MobileAds.instance.initialize();
+  FacebookAudienceNetwork.init();
   FlutterForegroundTask.initCommunicationPort();
   packageInfo = await PackageInfo.fromPlatform();
   //read json file from assets
@@ -142,7 +144,6 @@ void startCallback() {
 //   void onNotificationPressed() {
 //     FlutterForegroundTask.launchApp('/');
 //   }
-
 
 //   //
 //   // AOS: only work Android 14+

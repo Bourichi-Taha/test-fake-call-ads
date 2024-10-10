@@ -54,6 +54,7 @@ dependencies:
   win32:
   shared_preferences: ^2.3.2
   google_mobile_ads: ^2.4.0
+  facebook_audience_network: ^1.0.1
 
 dev_dependencies:
   flutter_test:

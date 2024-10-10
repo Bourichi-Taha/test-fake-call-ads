@@ -3,7 +3,8 @@
 import 'dart:io';
 import 'dart:ui';
 import 'package:bordered_text/bordered_text.dart';
-import 'package:fakecall/ads_manager/admob_ads/interstitial_ads.dart';
+import 'package:fakecall/ads_manager/interstitial_ads/admob_ads/interstitial_ads.dart';
+import 'package:fakecall/ads_manager/interstitial_ads/facebook_ads/facebook_ads.dart';
 import 'package:fakecall/model_view/data_provider.dart';
 import 'package:fakecall/view/call/call.dart';
 import 'package:fakecall/view/home/widget/home_item.dart';
@@ -27,7 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Future<void> requestReview() => inAppReview.requestReview();
 
-  final AdManager _adManager = AdManager();
+  final AdMobAds _adManager = AdMobAds();
 
   @override
   void initState() {
@@ -236,6 +237,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   value.data.content![index].icon.toString(),
                                   () {
                                 _handleClick();
+                                FacebookAds().handleClickfb();
                                 Navigator.push(context, MaterialPageRoute(
                                   builder: (context) {
                                     return CallScreen(
