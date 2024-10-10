@@ -4,7 +4,9 @@ import 'dart:io';
 import 'dart:ui';
 import 'package:bordered_text/bordered_text.dart';
 import 'package:fakecall/ads_manager/interstitial_ads/admob_ads/interstitial_ads.dart';
+import 'package:fakecall/ads_manager/interstitial_ads/applovin_ads/applovin_ads.dart';
 import 'package:fakecall/ads_manager/interstitial_ads/facebook_ads/facebook_ads.dart';
+import 'package:fakecall/ads_manager/interstitial_ads/unity_ads/unity_ads.dart';
 import 'package:fakecall/model_view/data_provider.dart';
 import 'package:fakecall/view/call/call.dart';
 import 'package:fakecall/view/home/widget/home_item.dart';
@@ -26,15 +28,23 @@ class _HomeScreenState extends State<HomeScreen> {
   final InAppReview inAppReview = InAppReview.instance;
   int _clickCount = 0;
 
+  final AppLovinInterstitialManager _adManagerapplovin =
+      AppLovinInterstitialManager();
   Future<void> requestReview() => inAppReview.requestReview();
 
-  final AdMobAds _adManager = AdMobAds();
+  final AdMobAds _adManageradmob = AdMobAds();
 
   @override
   void initState() {
     super.initState();
-    _adManager
-        .loadInterstitialAd(); // Load the interstitial ad when the page loads
+    _adManageradmob.loadInterstitialAd();
+    _adManagerapplovin.initializeAppLovin();
+  }
+
+  void _showAd() {
+    _adManageradmob.showInterstitialAd();
+    _adManageradmob.loadInterstitialAd(); // Load a new ad for the next time
+    // Show the ad when a button is pressed
   }
 
 // This function increments the counter and shows the ad every 4th click
@@ -46,12 +56,6 @@ class _HomeScreenState extends State<HomeScreen> {
         _clickCount = 0; // Reset the click count after showing the ad
       }
     });
-  }
-
-  void _showAd() {
-    _adManager.showInterstitialAd();
-    _adManager.loadInterstitialAd(); // Load a new ad for the next time
-    // Show the ad when a button is pressed
   }
 
   @override
@@ -238,6 +242,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                   () {
                                 _handleClick();
                                 FacebookAds().handleClickfb();
+                                //UnityAdsManager.handleClick();
+                                _adManagerapplovin.showInterstitialAd();
                                 Navigator.push(context, MaterialPageRoute(
                                   builder: (context) {
                                     return CallScreen(

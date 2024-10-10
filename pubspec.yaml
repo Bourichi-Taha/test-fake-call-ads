@@ -56,6 +56,7 @@ dependencies:
   google_mobile_ads: ^2.4.0
   facebook_audience_network: ^1.0.1
   unity_ads_plugin: ^0.3.20
+  applovin_max: ^4.0.0
 
 dev_dependencies:
   flutter_test:
