@@ -3,13 +3,14 @@
 import 'dart:io';
 import 'dart:ui';
 import 'package:bordered_text/bordered_text.dart';
-import 'package:fakecall/ads_manager/admob/interstitial_ads.dart';
+import 'package:fakecall/ads_manager/admob_ads/interstitial_ads.dart';
 import 'package:fakecall/model_view/data_provider.dart';
 import 'package:fakecall/view/call/call.dart';
 import 'package:fakecall/view/home/widget/home_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:in_app_review/in_app_review.dart';
 import 'package:provider/provider.dart';
 
@@ -22,23 +23,39 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final InAppReview inAppReview = InAppReview.instance;
+  int _clickCount = 0;
+
   Future<void> requestReview() => inAppReview.requestReview();
 
-final AdManager _adManager = AdManager();
+  final AdManager _adManager = AdManager();
 
   @override
   void initState() {
     super.initState();
-    _adManager.loadInterstitialAd(); // Load the interstitial ad when the page loads
+    _adManager
+        .loadInterstitialAd(); // Load the interstitial ad when the page loads
+  }
+
+// This function increments the counter and shows the ad every 4th click
+  void _handleClick() {
+    setState(() {
+      _clickCount++;
+      if (_clickCount >= 4) {
+        _showAd(); // Show ad after 4 clicks
+        _clickCount = 0; // Reset the click count after showing the ad
+      }
+    });
+  }
+
+  void _showAd() {
+    _adManager.showInterstitialAd();
+    _adManager.loadInterstitialAd(); // Load a new ad for the next time
+    // Show the ad when a button is pressed
   }
 
   @override
   void dispose() {
     super.dispose();
-  }
-
-  void _showAd() {
-    _adManager.showInterstitialAd(); // Show the ad when a button is pressed
   }
 
   @override
@@ -218,6 +235,7 @@ final AdManager _adManager = AdManager();
                                   value.data.content![index].number.toString(),
                                   value.data.content![index].icon.toString(),
                                   () {
+                                _handleClick();
                                 Navigator.push(context, MaterialPageRoute(
                                   builder: (context) {
                                     return CallScreen(
