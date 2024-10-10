@@ -5,7 +5,7 @@ class AppLovinInterstitialManager {
 
   void initializeAppLovin() {
     AppLovinMax.initialize(
-      sdkKey: "YOUR_APPLOVIN_SDK_KEY",
+      sdkKey: "",
       onSdkInitialized: (config) {
         print("AppLovin SDK initialized.");
         loadInterstitialAd();
