@@ -15,7 +15,7 @@
         <!-- Add your AdMob App ID here -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713"/>
+            android:value="ca-app-pub-5080833301669041~7852017046"/>
     </application>
 
     <!-- Second application block for the Facebook Audience Network -->

@@ -7,7 +7,7 @@ class AdMobAds {
   // Load the interstitial ad
   void loadInterstitialAd() {
     InterstitialAd.load(
-      adUnitId: 'ca-app-pub-3940256099942544/1033173712', // Test ad unit ID
+      adUnitId: 'ca-app-pub-5080833301669041/8364859227', // Test ad unit ID
       request: AdRequest(), // No need for testDevices here
       adLoadCallback: InterstitialAdLoadCallback(
         onAdLoaded: (InterstitialAd ad) {
