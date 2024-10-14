@@ -55,6 +55,10 @@ android {
     }
 }
 
+dependencies {
+    implementation 'com.unity3d.ads:unity-ads:4.11' // Check for the latest version
+}
+
 flutter {
     source = "../.."
 }

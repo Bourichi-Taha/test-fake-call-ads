@@ -55,7 +55,7 @@ dependencies:
   shared_preferences: ^2.3.2
   google_mobile_ads: ^2.4.0
   facebook_audience_network: ^1.0.1
-  unity_ads_plugin: ^0.3.20
+  unity_ads_plugin: ^0.3.21
   applovin_max: ^4.0.0
 
 dev_dependencies:

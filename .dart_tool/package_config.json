@@ -585,7 +585,7 @@
     },
     {
       "name": "unity_ads_plugin",
-      "rootUri": "file:///Users/apple/.pub-cache/hosted/pub.dev/unity_ads_plugin-0.3.20",
+      "rootUri": "file:///Users/apple/.pub-cache/hosted/pub.dev/unity_ads_plugin-0.3.21",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -764,7 +764,7 @@
       "languageVersion": "3.4"
     }
   ],
-  "generated": "2024-10-14T10:16:29.968725Z",
+  "generated": "2024-10-14T10:41:48.696513Z",
   "generator": "pub",
   "generatorVersion": "3.5.3",
   "flutterRoot": "file:///usr/local/Caskroom/flutter/3.24.3/flutter",

@@ -16,6 +16,8 @@
     	<key>NSAllowsArbitraryLoads</key>
     	<true/>
 	</dict>
+	<key>UnityAdsGameId</key>
+	<string>5712422</string>
 	<key>NSCameraUsageDescription</key>
 	<string>This app uses the camera to simulate video calls for entertainment purposes.</string>
 	<key>NSMicrophoneUsageDescription</key>

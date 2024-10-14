@@ -51,6 +51,10 @@ bool firstTime = false;
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  // Initialize Unity Ads
+  UnityAdsManager unityAdsManager = UnityAdsManager();
+  unityAdsManager.initialize();
+
   MobileAds.instance.initialize();
   FacebookAudienceNetwork.init();
   FlutterForegroundTask.initCommunicationPort();
@@ -70,6 +74,10 @@ Future main() async {
 
   //camera initialization
   cameras = await availableCameras();
+
+  // Load interstitial ad (so it's ready when needed)
+  await unityAdsManager.loadInterstitialAd();
+
   runApp(const MyApp());
 }
 
