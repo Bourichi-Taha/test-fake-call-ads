@@ -1,4 +1,4 @@
-package com.example.your_project_name
+package com.example.fakecall
 
 import android.os.Bundle
 import io.flutter.embedding.android.FlutterActivity

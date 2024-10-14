@@ -1,0 +1,836 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.fakecall"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="34" />
+10    <!--
+11         The INTERNET permission is required for development. Specifically,
+12         the Flutter tool needs it to communicate with the running application
+13         to allow setting breakpoints, to provide hot reload, etc.
+14    -->
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->/Users/ayeshaamjad/Documents/flutter_projects/fakecall/android/app/src/main/AndroidManifest.xml:2:5-66
+15-->/Users/ayeshaamjad/Documents/flutter_projects/fakecall/android/app/src/main/AndroidManifest.xml:2:22-64
+16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+16-->/Users/ayeshaamjad/Documents/flutter_projects/fakecall/android/app/src/main/AndroidManifest.xml:3:5-78
+16-->/Users/ayeshaamjad/Documents/flutter_projects/fakecall/android/app/src/main/AndroidManifest.xml:3:22-76
+17    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+17-->/Users/ayeshaamjad/Documents/flutter_projects/fakecall/android/app/src/main/AndroidManifest.xml:4:5-78
+17-->/Users/ayeshaamjad/Documents/flutter_projects/fakecall/android/app/src/main/AndroidManifest.xml:4:22-75
+18    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- foregroundServiceType: dataSync -->
+18-->/Users/ayeshaamjad/Documents/flutter_projects/fakecall/android/app/src/main/AndroidManifest.xml:5:5-77
+18-->/Users/ayeshaamjad/Documents/flutter_projects/fakecall/android/app/src/main/AndroidManifest.xml:5:22-74
+19    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" /> <!-- foregroundServiceType: remoteMessaging -->
+19-->/Users/ayeshaamjad/Documents/flutter_projects/fakecall/android/app/src/main/AndroidManifest.xml:8:5-87
+19-->/Users/ayeshaamjad/Documents/flutter_projects/fakecall/android/app/src/main/AndroidManifest.xml:8:22-84
+20    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_REMOTE_MESSAGING" />
+20-->/Users/ayeshaamjad/Documents/flutter_projects/fakecall/android/app/src/main/AndroidManifest.xml:11:5-94
+20-->/Users/ayeshaamjad/Documents/flutter_projects/fakecall/android/app/src/main/AndroidManifest.xml:11:22-91
+21
+22    <queries>
+22-->/Users/ayeshaamjad/Documents/flutter_projects/fakecall/android/app/src/main/AndroidManifest.xml:73:5-78:15
+23        <intent>
+23-->/Users/ayeshaamjad/Documents/flutter_projects/fakecall/android/app/src/main/AndroidManifest.xml:74:9-77:18
+24            <action android:name="android.intent.action.PROCESS_TEXT" />
+24-->/Users/ayeshaamjad/Documents/flutter_projects/fakecall/android/app/src/main/AndroidManifest.xml:75:13-72
+24-->/Users/ayeshaamjad/Documents/flutter_projects/fakecall/android/app/src/main/AndroidManifest.xml:75:21-70
+25
+26            <data android:mimeType="text/plain" />
+26-->/Users/ayeshaamjad/Documents/flutter_projects/fakecall/android/app/src/main/AndroidManifest.xml:76:13-50
+26-->/Users/ayeshaamjad/Documents/flutter_projects/fakecall/android/app/src/main/AndroidManifest.xml:76:19-48
+27        </intent>
+28        <intent>
+28-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:8:9-10:18
+29            <action android:name="com.applovin.am.intent.action.APPHUB_SERVICE" />
+29-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:9:13-83
+29-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:9:21-80
+30        </intent>
+31        <intent>
+31-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:11:9-13:18
+32            <action android:name="android.support.customtabs.action.CustomTabsService" />
+32-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:12:13-90
+32-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:12:21-87
+33        </intent>
+34
+35        <package android:name="com.facebook.katana" /> <!-- For browser content -->
+35-->[com.facebook.android:audience-network-sdk:6.18.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/9e6de70d405d5a9c21fd1ebdc231b8e6/transformed/jetified-audience-network-sdk-6.18.0/AndroidManifest.xml:12:9-55
+35-->[com.facebook.android:audience-network-sdk:6.18.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/9e6de70d405d5a9c21fd1ebdc231b8e6/transformed/jetified-audience-network-sdk-6.18.0/AndroidManifest.xml:12:18-52
+36        <intent>
+36-->[com.google.android.gms:play-services-ads-lite:21.3.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/47517deb516f14d87496cf9fb586a5ed/transformed/jetified-play-services-ads-lite-21.3.0/AndroidManifest.xml:31:9-37:18
+37            <action android:name="android.intent.action.VIEW" />
+37-->[com.google.android.gms:play-services-ads-lite:21.3.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/47517deb516f14d87496cf9fb586a5ed/transformed/jetified-play-services-ads-lite-21.3.0/AndroidManifest.xml:32:13-65
+37-->[com.google.android.gms:play-services-ads-lite:21.3.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/47517deb516f14d87496cf9fb586a5ed/transformed/jetified-play-services-ads-lite-21.3.0/AndroidManifest.xml:32:21-62
+38
+39            <category android:name="android.intent.category.BROWSABLE" />
+39-->[com.google.android.gms:play-services-ads-lite:21.3.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/47517deb516f14d87496cf9fb586a5ed/transformed/jetified-play-services-ads-lite-21.3.0/AndroidManifest.xml:34:13-74
+39-->[com.google.android.gms:play-services-ads-lite:21.3.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/47517deb516f14d87496cf9fb586a5ed/transformed/jetified-play-services-ads-lite-21.3.0/AndroidManifest.xml:34:23-71
+40
+41            <data android:scheme="https" />
+41-->/Users/ayeshaamjad/Documents/flutter_projects/fakecall/android/app/src/main/AndroidManifest.xml:76:13-50
+42        </intent>
+43    </queries>
+44
+45    <uses-permission android:name="android.permission.CAMERA" />
+45-->[:camera_android] /Users/ayeshaamjad/Documents/flutter_projects/fakecall/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-65
+45-->[:camera_android] /Users/ayeshaamjad/Documents/flutter_projects/fakecall/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-62
+46    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+46-->[:camera_android] /Users/ayeshaamjad/Documents/flutter_projects/fakecall/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-71
+46-->[:camera_android] /Users/ayeshaamjad/Documents/flutter_projects/fakecall/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-68
+47    <uses-permission android:name="android.permission.WAKE_LOCK" />
+47-->[:flutter_foreground_task] /Users/ayeshaamjad/Documents/flutter_projects/fakecall/build/flutter_foreground_task/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-68
+47-->[:flutter_foreground_task] /Users/ayeshaamjad/Documents/flutter_projects/fakecall/build/flutter_foreground_task/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-65
+48    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+48-->[:flutter_foreground_task] /Users/ayeshaamjad/Documents/flutter_projects/fakecall/build/flutter_foreground_task/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-81
+48-->[:flutter_foreground_task] /Users/ayeshaamjad/Documents/flutter_projects/fakecall/build/flutter_foreground_task/intermediates/merged_manifest/debug/AndroidManifest.xml:11:22-78
+49    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+49-->[:flutter_foreground_task] /Users/ayeshaamjad/Documents/flutter_projects/fakecall/build/flutter_foreground_task/intermediates/merged_manifest/debug/AndroidManifest.xml:12:5-77
+49-->[:flutter_foreground_task] /Users/ayeshaamjad/Documents/flutter_projects/fakecall/build/flutter_foreground_task/intermediates/merged_manifest/debug/AndroidManifest.xml:12:22-74
+50    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+50-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:10:5-79
+50-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:10:22-76
+51    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_TOPICS" />
+51-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:11:5-83
+51-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:11:22-80
+52    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION" />
+52-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:12:5-88
+52-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:12:22-85
+53    <uses-permission android:name="com.applovin.array.apphub.permission.BIND_APPHUB_SERVICE" /> <!-- Permissions required by Open Measurement SDK -->
+53-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:19:5-96
+53-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:19:22-93
+54    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+54-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:22:5-76
+54-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:22:22-73
+55
+56    <permission
+56-->[androidx.core:core:1.13.1] /Users/ayeshaamjad/.gradle/caches/transforms-3/8abb8d3af0d95059aea5f98917eedd7f/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
+57        android:name="com.example.fakecall.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+57-->[androidx.core:core:1.13.1] /Users/ayeshaamjad/.gradle/caches/transforms-3/8abb8d3af0d95059aea5f98917eedd7f/transformed/core-1.13.1/AndroidManifest.xml:23:9-81
+58        android:protectionLevel="signature" />
+58-->[androidx.core:core:1.13.1] /Users/ayeshaamjad/.gradle/caches/transforms-3/8abb8d3af0d95059aea5f98917eedd7f/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
+59
+60    <uses-permission android:name="com.example.fakecall.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" /> <!-- Single application block for AdMob, Facebook Audience Network, and Unity Ads -->
+60-->[androidx.core:core:1.13.1] /Users/ayeshaamjad/.gradle/caches/transforms-3/8abb8d3af0d95059aea5f98917eedd7f/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
+60-->[androidx.core:core:1.13.1] /Users/ayeshaamjad/.gradle/caches/transforms-3/8abb8d3af0d95059aea5f98917eedd7f/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
+61    <application
+62        android:name="android.app.Application"
+63        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+63-->[androidx.core:core:1.13.1] /Users/ayeshaamjad/.gradle/caches/transforms-3/8abb8d3af0d95059aea5f98917eedd7f/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
+64        android:debuggable="true"
+65        android:hardwareAccelerated="true"
+65-->[:facebook_audience_network] /Users/ayeshaamjad/Documents/flutter_projects/fakecall/build/facebook_audience_network/intermediates/merged_manifest/debug/AndroidManifest.xml:9:18-52
+66        android:icon="@mipmap/ic_launcher"
+67        android:label="fakecall"
+68        android:networkSecurityConfig="@xml/network_security_config"
+69        android:usesCleartextTraffic="true" >
+70
+71        <!-- AdMob App ID -->
+72        <meta-data
+73            android:name="com.google.android.gms.ads.APPLICATION_ID"
+74            android:value="ca-app-pub-5080833301669041~7852017046" />
+75
+76        <!-- Facebook SDK Application ID -->
+77        <meta-data
+78            android:name="com.facebook.sdk.ApplicationId"
+79            android:value="@string/facebook_app_id" />
+80
+81        <!-- Unity Ads Configuration -->
+82        <meta-data
+83            android:name="com.unity3d.ads.gameId"
+84            android:value="5712423" />
+85        <meta-data
+86            android:name="unityads.sdk.debug_mode"
+87            android:value="true" />
+88        <meta-data
+89            android:name="com.unity3d.ads.testMode"
+90            android:value="false" /> <!-- Set to false in production -->
+91
+92        <activity
+93            android:name="com.example.fakecall.MainActivity"
+94            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+95            android:exported="true"
+96            android:hardwareAccelerated="true"
+97            android:launchMode="singleTop"
+98            android:taskAffinity=""
+99            android:theme="@style/LaunchTheme"
+100            android:windowSoftInputMode="adjustResize" >
+101            <meta-data
+102                android:name="io.flutter.embedding.android.NormalTheme"
+103                android:resource="@style/NormalTheme" />
+104
+105            <intent-filter>
+106                <action android:name="android.intent.action.MAIN" />
+107
+108                <category android:name="android.intent.category.LAUNCHER" />
+109            </intent-filter>
+110        </activity>
+111
+112        <meta-data
+113            android:name="flutterEmbedding"
+114            android:value="2" />
+115
+116        <!-- Foreground Service -->
+117        <service
+118            android:name="com.pravera.flutter_foreground_task.service.ForegroundService"
+119            android:exported="false"
+120            android:foregroundServiceType="dataSync|remoteMessaging" />
+121
+122        <receiver
+122-->[:flutter_foreground_task] /Users/ayeshaamjad/Documents/flutter_projects/fakecall/build/flutter_foreground_task/intermediates/merged_manifest/debug/AndroidManifest.xml:15:9-23:20
+123            android:name="com.pravera.flutter_foreground_task.service.RebootReceiver"
+123-->[:flutter_foreground_task] /Users/ayeshaamjad/Documents/flutter_projects/fakecall/build/flutter_foreground_task/intermediates/merged_manifest/debug/AndroidManifest.xml:16:13-86
+124            android:enabled="true"
+124-->[:flutter_foreground_task] /Users/ayeshaamjad/Documents/flutter_projects/fakecall/build/flutter_foreground_task/intermediates/merged_manifest/debug/AndroidManifest.xml:17:13-35
+125            android:exported="true" >
+125-->[:flutter_foreground_task] /Users/ayeshaamjad/Documents/flutter_projects/fakecall/build/flutter_foreground_task/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-36
+126            <intent-filter>
+126-->[:flutter_foreground_task] /Users/ayeshaamjad/Documents/flutter_projects/fakecall/build/flutter_foreground_task/intermediates/merged_manifest/debug/AndroidManifest.xml:19:13-22:29
+127                <action android:name="android.intent.action.BOOT_COMPLETED" />
+127-->[:flutter_foreground_task] /Users/ayeshaamjad/Documents/flutter_projects/fakecall/build/flutter_foreground_task/intermediates/merged_manifest/debug/AndroidManifest.xml:20:17-79
+127-->[:flutter_foreground_task] /Users/ayeshaamjad/Documents/flutter_projects/fakecall/build/flutter_foreground_task/intermediates/merged_manifest/debug/AndroidManifest.xml:20:25-76
+128                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+128-->[:flutter_foreground_task] /Users/ayeshaamjad/Documents/flutter_projects/fakecall/build/flutter_foreground_task/intermediates/merged_manifest/debug/AndroidManifest.xml:21:17-84
+128-->[:flutter_foreground_task] /Users/ayeshaamjad/Documents/flutter_projects/fakecall/build/flutter_foreground_task/intermediates/merged_manifest/debug/AndroidManifest.xml:21:25-81
+129            </intent-filter>
+130        </receiver>
+131        <receiver
+131-->[:flutter_foreground_task] /Users/ayeshaamjad/Documents/flutter_projects/fakecall/build/flutter_foreground_task/intermediates/merged_manifest/debug/AndroidManifest.xml:24:9-27:40
+132            android:name="com.pravera.flutter_foreground_task.service.RestartReceiver"
+132-->[:flutter_foreground_task] /Users/ayeshaamjad/Documents/flutter_projects/fakecall/build/flutter_foreground_task/intermediates/merged_manifest/debug/AndroidManifest.xml:25:13-87
+133            android:enabled="true"
+133-->[:flutter_foreground_task] /Users/ayeshaamjad/Documents/flutter_projects/fakecall/build/flutter_foreground_task/intermediates/merged_manifest/debug/AndroidManifest.xml:26:13-35
+134            android:exported="false" />
+134-->[:flutter_foreground_task] /Users/ayeshaamjad/Documents/flutter_projects/fakecall/build/flutter_foreground_task/intermediates/merged_manifest/debug/AndroidManifest.xml:27:13-37
+135
+136        <meta-data
+136-->[:google_mobile_ads] /Users/ayeshaamjad/Documents/flutter_projects/fakecall/build/google_mobile_ads/intermediates/merged_manifest/debug/AndroidManifest.xml:12:9-14:36
+137            android:name="io.flutter.embedded_views_preview"
+137-->[:google_mobile_ads] /Users/ayeshaamjad/Documents/flutter_projects/fakecall/build/google_mobile_ads/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-61
+138            android:value="true" />
+138-->[:google_mobile_ads] /Users/ayeshaamjad/Documents/flutter_projects/fakecall/build/google_mobile_ads/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-33
+139
+140        <provider
+140-->[:share_plus] /Users/ayeshaamjad/Documents/flutter_projects/fakecall/build/share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
+141            android:name="dev.fluttercommunity.plus.share.ShareFileProvider"
+141-->[:share_plus] /Users/ayeshaamjad/Documents/flutter_projects/fakecall/build/share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-77
+142            android:authorities="com.example.fakecall.flutter.share_provider"
+142-->[:share_plus] /Users/ayeshaamjad/Documents/flutter_projects/fakecall/build/share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-74
+143            android:exported="false"
+143-->[:share_plus] /Users/ayeshaamjad/Documents/flutter_projects/fakecall/build/share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
+144            android:grantUriPermissions="true" >
+144-->[:share_plus] /Users/ayeshaamjad/Documents/flutter_projects/fakecall/build/share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
+145            <meta-data
+145-->[:share_plus] /Users/ayeshaamjad/Documents/flutter_projects/fakecall/build/share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:68
+146                android:name="android.support.FILE_PROVIDER_PATHS"
+146-->[:share_plus] /Users/ayeshaamjad/Documents/flutter_projects/fakecall/build/share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
+147                android:resource="@xml/flutter_share_file_paths" />
+147-->[:share_plus] /Users/ayeshaamjad/Documents/flutter_projects/fakecall/build/share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-65
+148        </provider>
+149
+150        <activity
+150-->[:url_launcher_android] /Users/ayeshaamjad/Documents/flutter_projects/fakecall/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-13:74
+151            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+151-->[:url_launcher_android] /Users/ayeshaamjad/Documents/flutter_projects/fakecall/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-74
+152            android:exported="false"
+152-->[:url_launcher_android] /Users/ayeshaamjad/Documents/flutter_projects/fakecall/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-37
+153            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+153-->[:url_launcher_android] /Users/ayeshaamjad/Documents/flutter_projects/fakecall/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-71
+154        <activity
+154-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:15:9-20:74
+155            android:name="com.unity3d.services.ads.adunit.AdUnitActivity"
+155-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:16:13-74
+156            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
+156-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:17:13-170
+157            android:exported="false"
+157-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:18:13-37
+158            android:hardwareAccelerated="true"
+158-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:19:13-47
+159            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+159-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:20:13-71
+160        <activity
+160-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:21:9-26:86
+161            android:name="com.unity3d.services.ads.adunit.AdUnitTransparentActivity"
+161-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:22:13-85
+162            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
+162-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:23:13-170
+163            android:exported="false"
+163-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:24:13-37
+164            android:hardwareAccelerated="true"
+164-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:25:13-47
+165            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+165-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:26:13-83
+166        <activity
+166-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:27:9-32:86
+167            android:name="com.unity3d.services.ads.adunit.AdUnitTransparentSoftwareActivity"
+167-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:28:13-93
+168            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
+168-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:29:13-170
+169            android:exported="false"
+169-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:30:13-37
+170            android:hardwareAccelerated="false"
+170-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:31:13-48
+171            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+171-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:32:13-83
+172        <activity
+172-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:33:9-38:74
+173            android:name="com.unity3d.services.ads.adunit.AdUnitSoftwareActivity"
+173-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:34:13-82
+174            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
+174-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:35:13-170
+175            android:exported="false"
+175-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:36:13-37
+176            android:hardwareAccelerated="false"
+176-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:37:13-48
+177            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+177-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:38:13-71
+178        <activity
+178-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:39:9-44:74
+179            android:name="com.unity3d.ads.adplayer.FullScreenWebViewDisplay"
+179-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:40:13-77
+180            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
+180-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:41:13-170
+181            android:exported="false"
+181-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:42:13-37
+182            android:hardwareAccelerated="true"
+182-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:43:13-47
+183            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+183-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:44:13-71
+184
+185        <provider
+185-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:46:9-56:20
+186            android:name="androidx.startup.InitializationProvider"
+186-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:47:13-67
+187            android:authorities="com.example.fakecall.androidx-startup"
+187-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:48:13-68
+188            android:exported="false" >
+188-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:34:13-37
+189            <meta-data
+189-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:50:13-52:52
+190                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+190-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:51:17-78
+191                android:value="androidx.startup" />
+191-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:52:17-49
+192            <meta-data
+192-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:53:13-55:52
+193                android:name="com.unity3d.services.core.configuration.AdsSdkInitializer"
+193-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:54:17-89
+194                android:value="androidx.startup" />
+194-->[com.unity3d.ads:unity-ads:4.12.3] /Users/ayeshaamjad/.gradle/caches/transforms-3/df62097dd749b30f4de12d1aff4d1dbd/transformed/jetified-unity-ads-4.12.3/AndroidManifest.xml:55:17-49
+195            <meta-data
+195-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:36:13-38:52
+196                android:name="androidx.work.WorkManagerInitializer"
+196-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:37:17-68
+197                android:value="androidx.startup" />
+197-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:38:17-49
+198            <meta-data
+198-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ayeshaamjad/.gradle/caches/transforms-3/80ff13a4dba7b77e62bbc664ffefe4ee/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+199                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+199-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ayeshaamjad/.gradle/caches/transforms-3/80ff13a4dba7b77e62bbc664ffefe4ee/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+200                android:value="androidx.startup" />
+200-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ayeshaamjad/.gradle/caches/transforms-3/80ff13a4dba7b77e62bbc664ffefe4ee/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+201        </provider>
+202        <provider
+202-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:25:9-29:39
+203            android:name="com.applovin.sdk.AppLovinInitProvider"
+203-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:26:13-65
+204            android:authorities="com.example.fakecall.applovininitprovider"
+204-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:27:13-72
+205            android:exported="false"
+205-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:28:13-37
+206            android:initOrder="101" /> <!-- Init order is 101 so we're before Firebase/Google which uses 100 -->
+206-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:29:13-36
+207        <activity
+207-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:31:9-38:74
+208            android:name="com.applovin.adview.AppLovinFullscreenActivity"
+208-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:32:13-74
+209            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+209-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:33:13-139
+210            android:exported="false"
+210-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:34:13-37
+211            android:hardwareAccelerated="true"
+211-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:35:13-47
+212            android:launchMode="singleTop"
+212-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:36:13-43
+213            android:screenOrientation="behind"
+213-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:37:13-47
+214            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+214-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:38:13-71
+215        <activity
+215-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:39:9-41:142
+216            android:name="com.applovin.sdk.AppLovinWebViewActivity"
+216-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:40:13-68
+217            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" /> <!-- Hybrid Ad Activities -->
+217-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:41:13-139
+218        <activity
+218-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:44:9-47:74
+219            android:name="com.applovin.mediation.hybridAds.MaxHybridMRecAdActivity"
+219-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:45:13-84
+220            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+220-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:46:13-139
+221            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+221-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:47:13-71
+222        <activity
+222-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:48:9-51:74
+223            android:name="com.applovin.mediation.hybridAds.MaxHybridNativeAdActivity"
+223-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:49:13-86
+224            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+224-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:50:13-139
+225            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" /> <!-- Mediation Debugger Activities -->
+225-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:51:13-71
+226        <activity
+226-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:54:9-57:87
+227            android:name="com.applovin.mediation.MaxDebuggerActivity"
+227-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:55:13-70
+228            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+228-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:56:13-139
+229            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+229-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:57:13-84
+230        <activity
+230-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:58:9-61:87
+231            android:name="com.applovin.mediation.MaxDebuggerDetailActivity"
+231-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:59:13-76
+232            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+232-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:60:13-139
+233            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+233-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:61:13-84
+234        <activity
+234-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:62:9-65:87
+235            android:name="com.applovin.mediation.MaxDebuggerMultiAdActivity"
+235-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:63:13-77
+236            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+236-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:64:13-139
+237            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+237-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:65:13-84
+238        <activity
+238-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:66:9-69:87
+239            android:name="com.applovin.mediation.MaxDebuggerAdUnitsListActivity"
+239-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:67:13-81
+240            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+240-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:68:13-139
+241            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+241-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:69:13-84
+242        <activity
+242-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:70:9-73:87
+243            android:name="com.applovin.mediation.MaxDebuggerAdUnitWaterfallsListActivity"
+243-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:71:13-90
+244            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+244-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:72:13-139
+245            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+245-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:73:13-84
+246        <activity
+246-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:74:9-77:87
+247            android:name="com.applovin.mediation.MaxDebuggerAdUnitDetailActivity"
+247-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:75:13-82
+248            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+248-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:76:13-139
+249            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+249-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:77:13-84
+250        <activity
+250-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:78:9-81:87
+251            android:name="com.applovin.mediation.MaxDebuggerCmpNetworksListActivity"
+251-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:79:13-85
+252            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+252-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:80:13-139
+253            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+253-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:81:13-84
+254        <activity
+254-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:82:9-85:87
+255            android:name="com.applovin.mediation.MaxDebuggerTcfConsentStatusesListActivity"
+255-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:83:13-92
+256            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+256-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:84:13-139
+257            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+257-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:85:13-84
+258        <activity
+258-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:86:9-89:87
+259            android:name="com.applovin.mediation.MaxDebuggerTcfInfoListActivity"
+259-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:87:13-81
+260            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+260-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:88:13-139
+261            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+261-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:89:13-84
+262        <activity
+262-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:90:9-93:87
+263            android:name="com.applovin.mediation.MaxDebuggerTcfStringActivity"
+263-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:91:13-79
+264            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+264-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:92:13-139
+265            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+265-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:93:13-84
+266        <activity
+266-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:94:9-97:87
+267            android:name="com.applovin.mediation.MaxDebuggerTestLiveNetworkActivity"
+267-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:95:13-85
+268            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+268-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:96:13-139
+269            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+269-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:97:13-84
+270        <activity
+270-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:98:9-101:87
+271            android:name="com.applovin.mediation.MaxDebuggerTestModeNetworkActivity"
+271-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:99:13-85
+272            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+272-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:100:13-139
+273            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+273-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:101:13-84
+274        <activity
+274-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:102:9-105:87
+275            android:name="com.applovin.mediation.MaxDebuggerUnifiedFlowActivity"
+275-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:103:13-81
+276            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+276-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:104:13-139
+277            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+277-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:105:13-84
+278        <activity
+278-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:106:9-109:87
+279            android:name="com.applovin.mediation.MaxDebuggerWaterfallSegmentsActivity"
+279-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:107:13-87
+280            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+280-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:108:13-139
+281            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+281-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:109:13-84
+282        <activity
+282-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:110:9-113:91
+283            android:name="com.applovin.creative.MaxCreativeDebuggerActivity"
+283-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:111:13-77
+284            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+284-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:112:13-139
+285            android:theme="@style/com.applovin.creative.CreativeDebuggerActivity.Theme" />
+285-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:113:13-88
+286        <activity
+286-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:114:9-117:91
+287            android:name="com.applovin.creative.MaxCreativeDebuggerDisplayedAdActivity"
+287-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:115:13-88
+288            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+288-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:116:13-139
+289            android:theme="@style/com.applovin.creative.CreativeDebuggerActivity.Theme" /> <!-- Services -->
+289-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:117:13-88
+290        <service
+290-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:120:9-123:44
+291            android:name="com.applovin.impl.adview.activity.FullscreenAdService"
+291-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:121:13-81
+292            android:exported="false"
+292-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:122:13-37
+293            android:stopWithTask="false" />
+293-->[com.applovin:applovin-sdk:13.0.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/1e0b959b950d3dc7013bb0615f679b92/transformed/jetified-applovin-sdk-13.0.0/AndroidManifest.xml:123:13-41
+294
+295        <activity
+295-->[com.google.android.gms:play-services-base:18.2.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/980ab925d70c1bfbb52ef9ce24dce5ad/transformed/jetified-play-services-base-18.2.0/AndroidManifest.xml:20:9-22:45
+296            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+296-->[com.google.android.gms:play-services-base:18.2.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/980ab925d70c1bfbb52ef9ce24dce5ad/transformed/jetified-play-services-base-18.2.0/AndroidManifest.xml:20:19-85
+297            android:exported="false"
+297-->[com.google.android.gms:play-services-base:18.2.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/980ab925d70c1bfbb52ef9ce24dce5ad/transformed/jetified-play-services-base-18.2.0/AndroidManifest.xml:22:19-43
+298            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+298-->[com.google.android.gms:play-services-base:18.2.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/980ab925d70c1bfbb52ef9ce24dce5ad/transformed/jetified-play-services-base-18.2.0/AndroidManifest.xml:21:19-78
+299
+300        <uses-library
+300-->[androidx.window:window:1.2.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/ac03e32cad5179f12d4a5d00c413fe81/transformed/jetified-window-1.2.0/AndroidManifest.xml:23:9-25:40
+301            android:name="androidx.window.extensions"
+301-->[androidx.window:window:1.2.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/ac03e32cad5179f12d4a5d00c413fe81/transformed/jetified-window-1.2.0/AndroidManifest.xml:24:13-54
+302            android:required="false" />
+302-->[androidx.window:window:1.2.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/ac03e32cad5179f12d4a5d00c413fe81/transformed/jetified-window-1.2.0/AndroidManifest.xml:25:13-37
+303        <uses-library
+303-->[androidx.window:window:1.2.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/ac03e32cad5179f12d4a5d00c413fe81/transformed/jetified-window-1.2.0/AndroidManifest.xml:26:9-28:40
+304            android:name="androidx.window.sidecar"
+304-->[androidx.window:window:1.2.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/ac03e32cad5179f12d4a5d00c413fe81/transformed/jetified-window-1.2.0/AndroidManifest.xml:27:13-51
+305            android:required="false" />
+305-->[androidx.window:window:1.2.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/ac03e32cad5179f12d4a5d00c413fe81/transformed/jetified-window-1.2.0/AndroidManifest.xml:28:13-37
+306
+307        <activity
+307-->[com.facebook.android:audience-network-sdk:6.18.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/9e6de70d405d5a9c21fd1ebdc231b8e6/transformed/jetified-audience-network-sdk-6.18.0/AndroidManifest.xml:20:9-24:75
+308            android:name="com.facebook.ads.AudienceNetworkActivity"
+308-->[com.facebook.android:audience-network-sdk:6.18.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/9e6de70d405d5a9c21fd1ebdc231b8e6/transformed/jetified-audience-network-sdk-6.18.0/AndroidManifest.xml:21:13-68
+309            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout"
+309-->[com.facebook.android:audience-network-sdk:6.18.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/9e6de70d405d5a9c21fd1ebdc231b8e6/transformed/jetified-audience-network-sdk-6.18.0/AndroidManifest.xml:22:13-106
+310            android:exported="false"
+310-->[com.facebook.android:audience-network-sdk:6.18.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/9e6de70d405d5a9c21fd1ebdc231b8e6/transformed/jetified-audience-network-sdk-6.18.0/AndroidManifest.xml:23:13-37
+311            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+311-->[com.facebook.android:audience-network-sdk:6.18.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/9e6de70d405d5a9c21fd1ebdc231b8e6/transformed/jetified-audience-network-sdk-6.18.0/AndroidManifest.xml:24:13-72
+312
+313        <provider
+313-->[com.facebook.android:audience-network-sdk:6.18.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/9e6de70d405d5a9c21fd1ebdc231b8e6/transformed/jetified-audience-network-sdk-6.18.0/AndroidManifest.xml:26:9-29:40
+314            android:name="com.facebook.ads.AudienceNetworkContentProvider"
+314-->[com.facebook.android:audience-network-sdk:6.18.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/9e6de70d405d5a9c21fd1ebdc231b8e6/transformed/jetified-audience-network-sdk-6.18.0/AndroidManifest.xml:27:13-75
+315            android:authorities="com.example.fakecall.AudienceNetworkContentProvider"
+315-->[com.facebook.android:audience-network-sdk:6.18.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/9e6de70d405d5a9c21fd1ebdc231b8e6/transformed/jetified-audience-network-sdk-6.18.0/AndroidManifest.xml:28:13-82
+316            android:exported="false" /> <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
+316-->[com.facebook.android:audience-network-sdk:6.18.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/9e6de70d405d5a9c21fd1ebdc231b8e6/transformed/jetified-audience-network-sdk-6.18.0/AndroidManifest.xml:29:13-37
+317        <activity
+317-->[com.google.android.gms:play-services-ads-lite:21.3.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/47517deb516f14d87496cf9fb586a5ed/transformed/jetified-play-services-ads-lite-21.3.0/AndroidManifest.xml:49:9-53:64
+318            android:name="com.google.android.gms.ads.AdActivity"
+318-->[com.google.android.gms:play-services-ads-lite:21.3.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/47517deb516f14d87496cf9fb586a5ed/transformed/jetified-play-services-ads-lite-21.3.0/AndroidManifest.xml:50:13-65
+319            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+319-->[com.google.android.gms:play-services-ads-lite:21.3.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/47517deb516f14d87496cf9fb586a5ed/transformed/jetified-play-services-ads-lite-21.3.0/AndroidManifest.xml:51:13-122
+320            android:exported="false"
+320-->[com.google.android.gms:play-services-ads-lite:21.3.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/47517deb516f14d87496cf9fb586a5ed/transformed/jetified-play-services-ads-lite-21.3.0/AndroidManifest.xml:52:13-37
+321            android:theme="@android:style/Theme.Translucent" />
+321-->[com.google.android.gms:play-services-ads-lite:21.3.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/47517deb516f14d87496cf9fb586a5ed/transformed/jetified-play-services-ads-lite-21.3.0/AndroidManifest.xml:53:13-61
+322
+323        <provider
+323-->[com.google.android.gms:play-services-ads-lite:21.3.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/47517deb516f14d87496cf9fb586a5ed/transformed/jetified-play-services-ads-lite-21.3.0/AndroidManifest.xml:55:9-59:39
+324            android:name="com.google.android.gms.ads.MobileAdsInitProvider"
+324-->[com.google.android.gms:play-services-ads-lite:21.3.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/47517deb516f14d87496cf9fb586a5ed/transformed/jetified-play-services-ads-lite-21.3.0/AndroidManifest.xml:56:13-76
+325            android:authorities="com.example.fakecall.mobileadsinitprovider"
+325-->[com.google.android.gms:play-services-ads-lite:21.3.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/47517deb516f14d87496cf9fb586a5ed/transformed/jetified-play-services-ads-lite-21.3.0/AndroidManifest.xml:57:13-73
+326            android:exported="false"
+326-->[com.google.android.gms:play-services-ads-lite:21.3.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/47517deb516f14d87496cf9fb586a5ed/transformed/jetified-play-services-ads-lite-21.3.0/AndroidManifest.xml:58:13-37
+327            android:initOrder="100" />
+327-->[com.google.android.gms:play-services-ads-lite:21.3.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/47517deb516f14d87496cf9fb586a5ed/transformed/jetified-play-services-ads-lite-21.3.0/AndroidManifest.xml:59:13-36
+328
+329        <service
+329-->[com.google.android.gms:play-services-ads-lite:21.3.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/47517deb516f14d87496cf9fb586a5ed/transformed/jetified-play-services-ads-lite-21.3.0/AndroidManifest.xml:61:9-64:40
+330            android:name="com.google.android.gms.ads.AdService"
+330-->[com.google.android.gms:play-services-ads-lite:21.3.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/47517deb516f14d87496cf9fb586a5ed/transformed/jetified-play-services-ads-lite-21.3.0/AndroidManifest.xml:62:13-64
+331            android:enabled="true"
+331-->[com.google.android.gms:play-services-ads-lite:21.3.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/47517deb516f14d87496cf9fb586a5ed/transformed/jetified-play-services-ads-lite-21.3.0/AndroidManifest.xml:63:13-35
+332            android:exported="false" />
+332-->[com.google.android.gms:play-services-ads-lite:21.3.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/47517deb516f14d87496cf9fb586a5ed/transformed/jetified-play-services-ads-lite-21.3.0/AndroidManifest.xml:64:13-37
+333
+334        <meta-data
+334-->[com.google.android.gms:play-services-basement:18.1.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/c6d4d2de92c3e9f0c8a3a87881ba3543/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+335            android:name="com.google.android.gms.version"
+335-->[com.google.android.gms:play-services-basement:18.1.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/c6d4d2de92c3e9f0c8a3a87881ba3543/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
+336            android:value="@integer/google_play_services_version" />
+336-->[com.google.android.gms:play-services-basement:18.1.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/c6d4d2de92c3e9f0c8a3a87881ba3543/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
+337
+338        <service
+338-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:41:9-46:35
+339            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+339-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:42:13-88
+340            android:directBootAware="false"
+340-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:43:13-44
+341            android:enabled="@bool/enable_system_alarm_service_default"
+341-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:44:13-72
+342            android:exported="false" />
+342-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:45:13-37
+343        <service
+343-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:47:9-53:35
+344            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+344-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:48:13-84
+345            android:directBootAware="false"
+345-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:49:13-44
+346            android:enabled="@bool/enable_system_job_service_default"
+346-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:50:13-70
+347            android:exported="true"
+347-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:51:13-36
+348            android:permission="android.permission.BIND_JOB_SERVICE" />
+348-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:52:13-69
+349        <service
+349-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:54:9-59:35
+350            android:name="androidx.work.impl.foreground.SystemForegroundService"
+350-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:55:13-81
+351            android:directBootAware="false"
+351-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:56:13-44
+352            android:enabled="@bool/enable_system_foreground_service_default"
+352-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:57:13-77
+353            android:exported="false" />
+353-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:58:13-37
+354
+355        <receiver
+355-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:61:9-66:35
+356            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+356-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:62:13-88
+357            android:directBootAware="false"
+357-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:63:13-44
+358            android:enabled="true"
+358-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:64:13-35
+359            android:exported="false" />
+359-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:65:13-37
+360        <receiver
+360-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:67:9-77:20
+361            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+361-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:68:13-106
+362            android:directBootAware="false"
+362-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:69:13-44
+363            android:enabled="false"
+363-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:70:13-36
+364            android:exported="false" >
+364-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:71:13-37
+365            <intent-filter>
+365-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:73:13-76:29
+366                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+366-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:74:17-87
+366-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:74:25-84
+367                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+367-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:75:17-90
+367-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:75:25-87
+368            </intent-filter>
+369        </receiver>
+370        <receiver
+370-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:78:9-88:20
+371            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+371-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:79:13-104
+372            android:directBootAware="false"
+372-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:80:13-44
+373            android:enabled="false"
+373-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:81:13-36
+374            android:exported="false" >
+374-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:82:13-37
+375            <intent-filter>
+375-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:84:13-87:29
+376                <action android:name="android.intent.action.BATTERY_OKAY" />
+376-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:85:17-77
+376-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:85:25-74
+377                <action android:name="android.intent.action.BATTERY_LOW" />
+377-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:86:17-76
+377-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:86:25-73
+378            </intent-filter>
+379        </receiver>
+380        <receiver
+380-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:89:9-99:20
+381            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+381-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:90:13-104
+382            android:directBootAware="false"
+382-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:91:13-44
+383            android:enabled="false"
+383-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:92:13-36
+384            android:exported="false" >
+384-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:93:13-37
+385            <intent-filter>
+385-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:95:13-98:29
+386                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+386-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:96:17-83
+386-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:96:25-80
+387                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+387-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:97:17-82
+387-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:97:25-79
+388            </intent-filter>
+389        </receiver>
+390        <receiver
+390-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:100:9-109:20
+391            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+391-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:101:13-103
+392            android:directBootAware="false"
+392-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:102:13-44
+393            android:enabled="false"
+393-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:103:13-36
+394            android:exported="false" >
+394-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:104:13-37
+395            <intent-filter>
+395-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:106:13-108:29
+396                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+396-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:107:17-79
+396-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:107:25-76
+397            </intent-filter>
+398        </receiver>
+399        <receiver
+399-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:110:9-121:20
+400            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+400-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:111:13-88
+401            android:directBootAware="false"
+401-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:112:13-44
+402            android:enabled="false"
+402-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:113:13-36
+403            android:exported="false" >
+403-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:114:13-37
+404            <intent-filter>
+404-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:116:13-120:29
+405                <action android:name="android.intent.action.BOOT_COMPLETED" />
+405-->[:flutter_foreground_task] /Users/ayeshaamjad/Documents/flutter_projects/fakecall/build/flutter_foreground_task/intermediates/merged_manifest/debug/AndroidManifest.xml:20:17-79
+405-->[:flutter_foreground_task] /Users/ayeshaamjad/Documents/flutter_projects/fakecall/build/flutter_foreground_task/intermediates/merged_manifest/debug/AndroidManifest.xml:20:25-76
+406                <action android:name="android.intent.action.TIME_SET" />
+406-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:118:17-73
+406-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:118:25-70
+407                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+407-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:119:17-81
+407-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:119:25-78
+408            </intent-filter>
+409        </receiver>
+410        <receiver
+410-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:122:9-131:20
+411            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+411-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:123:13-99
+412            android:directBootAware="false"
+412-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:124:13-44
+413            android:enabled="@bool/enable_system_alarm_service_default"
+413-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:125:13-72
+414            android:exported="false" >
+414-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:126:13-37
+415            <intent-filter>
+415-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:128:13-130:29
+416                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+416-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:129:17-98
+416-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:129:25-95
+417            </intent-filter>
+418        </receiver>
+419        <receiver
+419-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:132:9-142:20
+420            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+420-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:133:13-78
+421            android:directBootAware="false"
+421-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:134:13-44
+422            android:enabled="true"
+422-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:135:13-35
+423            android:exported="true"
+423-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:136:13-36
+424            android:permission="android.permission.DUMP" >
+424-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:137:13-57
+425            <intent-filter>
+425-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:139:13-141:29
+426                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+426-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:140:17-88
+426-->[androidx.work:work-runtime:2.7.0] /Users/ayeshaamjad/.gradle/caches/transforms-3/2d3f9ac8a965caf265a04c9b91bf5686/transformed/work-runtime-2.7.0/AndroidManifest.xml:140:25-85
+427            </intent-filter>
+428        </receiver>
+429        <receiver
+429-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ayeshaamjad/.gradle/caches/transforms-3/80ff13a4dba7b77e62bbc664ffefe4ee/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+430            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+430-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ayeshaamjad/.gradle/caches/transforms-3/80ff13a4dba7b77e62bbc664ffefe4ee/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+431            android:directBootAware="false"
+431-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ayeshaamjad/.gradle/caches/transforms-3/80ff13a4dba7b77e62bbc664ffefe4ee/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+432            android:enabled="true"
+432-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ayeshaamjad/.gradle/caches/transforms-3/80ff13a4dba7b77e62bbc664ffefe4ee/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+433            android:exported="true"
+433-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ayeshaamjad/.gradle/caches/transforms-3/80ff13a4dba7b77e62bbc664ffefe4ee/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+434            android:permission="android.permission.DUMP" >
+434-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ayeshaamjad/.gradle/caches/transforms-3/80ff13a4dba7b77e62bbc664ffefe4ee/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+435            <intent-filter>
+435-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ayeshaamjad/.gradle/caches/transforms-3/80ff13a4dba7b77e62bbc664ffefe4ee/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+436                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+436-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ayeshaamjad/.gradle/caches/transforms-3/80ff13a4dba7b77e62bbc664ffefe4ee/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+436-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ayeshaamjad/.gradle/caches/transforms-3/80ff13a4dba7b77e62bbc664ffefe4ee/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+437            </intent-filter>
+438            <intent-filter>
+438-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ayeshaamjad/.gradle/caches/transforms-3/80ff13a4dba7b77e62bbc664ffefe4ee/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+439                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+439-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ayeshaamjad/.gradle/caches/transforms-3/80ff13a4dba7b77e62bbc664ffefe4ee/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+439-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ayeshaamjad/.gradle/caches/transforms-3/80ff13a4dba7b77e62bbc664ffefe4ee/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+440            </intent-filter>
+441            <intent-filter>
+441-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ayeshaamjad/.gradle/caches/transforms-3/80ff13a4dba7b77e62bbc664ffefe4ee/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+442                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+442-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ayeshaamjad/.gradle/caches/transforms-3/80ff13a4dba7b77e62bbc664ffefe4ee/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+442-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ayeshaamjad/.gradle/caches/transforms-3/80ff13a4dba7b77e62bbc664ffefe4ee/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+443            </intent-filter>
+444            <intent-filter>
+444-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ayeshaamjad/.gradle/caches/transforms-3/80ff13a4dba7b77e62bbc664ffefe4ee/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+445                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+445-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ayeshaamjad/.gradle/caches/transforms-3/80ff13a4dba7b77e62bbc664ffefe4ee/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+445-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ayeshaamjad/.gradle/caches/transforms-3/80ff13a4dba7b77e62bbc664ffefe4ee/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+446            </intent-filter>
+447        </receiver>
+448
+449        <service
+449-->[androidx.room:room-runtime:2.2.5] /Users/ayeshaamjad/.gradle/caches/transforms-3/a023cd889ac2f1d2766625a278ad959d/transformed/room-runtime-2.2.5/AndroidManifest.xml:25:9-28:40
+450            android:name="androidx.room.MultiInstanceInvalidationService"
+450-->[androidx.room:room-runtime:2.2.5] /Users/ayeshaamjad/.gradle/caches/transforms-3/a023cd889ac2f1d2766625a278ad959d/transformed/room-runtime-2.2.5/AndroidManifest.xml:26:13-74
+451            android:directBootAware="true"
+451-->[androidx.room:room-runtime:2.2.5] /Users/ayeshaamjad/.gradle/caches/transforms-3/a023cd889ac2f1d2766625a278ad959d/transformed/room-runtime-2.2.5/AndroidManifest.xml:27:13-43
+452            android:exported="false" /> <!-- The activities will be merged into the manifest of the hosting app. -->
+452-->[androidx.room:room-runtime:2.2.5] /Users/ayeshaamjad/.gradle/caches/transforms-3/a023cd889ac2f1d2766625a278ad959d/transformed/room-runtime-2.2.5/AndroidManifest.xml:28:13-37
+453        <activity
+453-->[com.google.android.play:core-common:2.0.2] /Users/ayeshaamjad/.gradle/caches/transforms-3/62316b92f608193d1b792537924c7893/transformed/jetified-core-common-2.0.2/AndroidManifest.xml:14:9-18:65
+454            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
+454-->[com.google.android.play:core-common:2.0.2] /Users/ayeshaamjad/.gradle/caches/transforms-3/62316b92f608193d1b792537924c7893/transformed/jetified-core-common-2.0.2/AndroidManifest.xml:15:13-93
+455            android:exported="false"
+455-->[com.google.android.play:core-common:2.0.2] /Users/ayeshaamjad/.gradle/caches/transforms-3/62316b92f608193d1b792537924c7893/transformed/jetified-core-common-2.0.2/AndroidManifest.xml:16:13-37
+456            android:stateNotNeeded="true"
+456-->[com.google.android.play:core-common:2.0.2] /Users/ayeshaamjad/.gradle/caches/transforms-3/62316b92f608193d1b792537924c7893/transformed/jetified-core-common-2.0.2/AndroidManifest.xml:17:13-42
+457            android:theme="@style/Theme.PlayCore.Transparent" />
+457-->[com.google.android.play:core-common:2.0.2] /Users/ayeshaamjad/.gradle/caches/transforms-3/62316b92f608193d1b792537924c7893/transformed/jetified-core-common-2.0.2/AndroidManifest.xml:18:13-62
+458    </application>
+459
+460</manifest>
