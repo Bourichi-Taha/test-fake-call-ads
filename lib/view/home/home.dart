@@ -2,10 +2,10 @@ import 'dart:io';
 import 'dart:math';
 import 'dart:ui';
 import 'package:bordered_text/bordered_text.dart';
-import 'package:fakecall/ads_manager/interstitial_ads/admob_ads/interstitial_ads.dart';
-import 'package:fakecall/ads_manager/interstitial_ads/applovin_ads/applovin_ads.dart';
-import 'package:fakecall/ads_manager/interstitial_ads/facebook_ads/facebook_ads.dart';
-import 'package:fakecall/ads_manager/interstitial_ads/unity_ads/unity_ads.dart';
+import 'package:fakecall/ad_manager/admob_ads/interstitial_ads.dart';
+import 'package:fakecall/ad_manager/applovin_ads/applovin_ads.dart';
+import 'package:fakecall/ad_manager/facebook_ads/facebook_ads.dart';
+import 'package:fakecall/ad_manager/unity_ads/unity_ads.dart';
 import 'package:fakecall/model_view/data_provider.dart';
 import 'package:fakecall/view/call/call.dart';
 import 'package:fakecall/view/home/widget/home_item.dart';
@@ -26,9 +26,10 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   final InAppReview inAppReview = InAppReview.instance;
   int _clickCount = 0;
+  int _adSequenceIndex = 0;
 
-  // final AppLovinInterstitialManager _adManagerAppLovin =
-  //     AppLovinInterstitialManager();
+  final AppLovinInterstitialManager _adManagerAppLovin =
+      AppLovinInterstitialManager();
   final UnityAdsManager _unityAdsManager = UnityAdsManager();
   final FacebookAds _facebookAdsManager = FacebookAds();
   final AdMobAds _adMobManager = AdMobAds();
@@ -36,34 +37,70 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
-    //_adManagerAppLovin.initializeAppLovin(); // Initialize AppLovin
+    _adManagerAppLovin.initializeAppLovin(); // Initialize AppLovin
     _unityAdsManager.initialize(); // Initialize Unity Ads
     _facebookAdsManager.initialize(); // Initialize Facebook Ads
     _adMobManager.loadInterstitialAd(); // Load AdMob interstitial ad
   }
 
   // Function to randomly pick and show one ad after 4 clicks
-  void _showRandomAd() {
-    int randomAd = Random().nextInt(4); // Random number between 0 and 3
-    switch (randomAd) {
+  // void _showRandomAd() {
+  //   int randomAd = Random().nextInt(4); // Random number between 0 and 3
+  //   switch (randomAd) {
+  //     case 0:
+  //       print("Showing AdMob Ad");
+  //       _adMobManager.showInterstitialAd(); // Show AdMob Ad
+  //       break;
+  //     case 1:
+  //       //print("Showing AppLovin Ad");
+  //       //_adManagerAppLovin.showInterstitialAd(); // Show AppLovin Ad
+  //       break;
+  //     case 2:
+  //       print("Showing Facebook Ad");
+  //       _facebookAdsManager.handleClickfb(); // Show Facebook Ad
+  //       break;
+  //     case 3:
+  //       print("Showing Unity Ad");
+  //       _unityAdsManager.showInterstitialAd(); // Show Unity Ad
+  //       break;
+  //     default:
+  //       print("No Ad to show.");
+  //   }
+  // }
+
+  // Function to show ads in the specified sequence: AdMob -> Facebook -> Unity -> AppLovin
+  void _showSequentialAd() {
+    switch (_adSequenceIndex) {
       case 0:
-        print("Showing AdMob Ad");
-        _adMobManager.showInterstitialAd(); // Show AdMob Ad
+        // Show AdMob Ad
+        if (_adMobManager.isAdReady()) {
+          _adMobManager.showInterstitialAd();
+          _adSequenceIndex = 1; // Move to Facebook for next ad
+        }
         break;
       case 1:
-        //print("Showing AppLovin Ad");
-        //_adManagerAppLovin.showInterstitialAd(); // Show AppLovin Ad
+        // Show Facebook Ad
+        if (_facebookAdsManager.isAdReady()) {
+          _facebookAdsManager.showInterstitialAd();
+          _adSequenceIndex = 2; // Move to Unity for next ad
+        }
         break;
       case 2:
-        print("Showing Facebook Ad");
-        _facebookAdsManager.handleClickfb(); // Show Facebook Ad
+        // Show Unity Ad
+        if (_unityAdsManager.isAdReady()) {
+          _unityAdsManager.showInterstitialAd();
+          _adSequenceIndex = 3; // Move to AppLovin for next ad
+        }
         break;
       case 3:
-        print("Showing Unity Ad");
-        _unityAdsManager.showInterstitialAd(); // Show Unity Ad
+        // Show AppLovin Ad
+        // if (_appLovinManager.isAdReady()) {
+        //   _appLovinManager.showInterstitialAd();
+        // }
+        _adSequenceIndex = 0; // Reset to AdMob for next round
         break;
       default:
-        print("No Ad to show.");
+        _adSequenceIndex = 0; // Default back to AdMob
     }
   }
 
@@ -72,7 +109,7 @@ class _HomeScreenState extends State<HomeScreen> {
     setState(() {
       _clickCount++;
       if (_clickCount >= 4) {
-        _showRandomAd(); // Show random ad after 4 clicks
+        _showSequentialAd(); // Show random ad after 4 clicks
         _clickCount = 0; // Reset the click counter
       }
     });

@@ -12,7 +12,7 @@
 
 import 'dart:convert';
 import 'dart:io';
-import 'package:fakecall/ads_manager/interstitial_ads/unity_ads/unity_ads.dart';
+import 'package:fakecall/ad_manager/unity_ads/unity_ads.dart';
 import 'package:fakecall/model/data.dart';
 import 'package:fakecall/model_view/data_provider.dart';
 import 'package:fakecall/view/brand.dart';
@@ -31,8 +31,8 @@ import 'package:permission_handler/permission_handler.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:facebook_audience_network/facebook_audience_network.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
-import 'package:facebook_audience_network/facebook_audience_network.dart';
+import 'package:applovin_max/applovin_max.dart';
+import 'package:unity_ads_plugin/unity_ads_plugin.dart';
 
 ///creat by Mfagri
 Data data = Data();
@@ -51,12 +51,17 @@ bool firstTime = false;
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // Initialize Unity Ads
-  UnityAdsManager unityAdsManager = UnityAdsManager();
-  unityAdsManager.initialize();
-
+  // Initialize Google Mobile Ads SDK (AdMob)
   MobileAds.instance.initialize();
+
+  // Initialize Facebook Audience Network
   FacebookAudienceNetwork.init();
+
+  // Initialize Unity Ads SDK
+  UnityAds.init(gameId: 'YOUR_UNITY_GAME_ID', testMode: true);
+
+  // Initialize AppLovin Max SDK
+  AppLovinMAX.initialize('YOUR_APPLOVIN_KEY');
   FlutterForegroundTask.initCommunicationPort();
   packageInfo = await PackageInfo.fromPlatform();
   //read json file from assets
@@ -76,7 +81,7 @@ Future main() async {
   cameras = await availableCameras();
 
   // Load interstitial ad (so it's ready when needed)
-  await unityAdsManager.loadInterstitialAd();
+  //await UnityAds.loadInterstitialAd();
 
   runApp(const MyApp());
 }

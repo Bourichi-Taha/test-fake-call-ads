@@ -56,7 +56,10 @@ android {
 }
 
 dependencies {
-    implementation 'com.unity3d.ads:unity-ads:4.11' // Check for the latest version
+    implementation 'com.google.android.gms:play-services-ads:21.0.0'  // For AdMob
+    implementation 'com.facebook.android:audience-network-sdk:6.5.0'  // For Facebook Ads
+    implementation 'com.unity3d.ads:unity-ads:3.7.5'                  // For Unity Ads
+    implementation 'com.applovin:applovin-sdk:+@aar'                  // For AppLovin
 }
 
 flutter {

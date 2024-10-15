@@ -3,6 +3,9 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        // Add Facebook SDK repository
+        maven { url 'https://maven.google.com' }
+        maven { url 'https://developers.google.com/android' }
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"

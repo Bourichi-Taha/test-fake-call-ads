@@ -35,4 +35,8 @@ class AdMobAds {
       print('Interstitial ad is not ready yet.');
     }
   }
+
+  bool isAdReady() {
+    return _isAdLoaded;
+  }
 }

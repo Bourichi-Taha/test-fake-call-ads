@@ -39,7 +39,10 @@
         <meta-data
             android:name="com.unity3d.ads.testMode"
             android:value="false" /> <!-- Set to false in production -->
-
+        <!-- AppLovin SDK metadata -->
+        <meta-data
+            android:name="applovin.sdk.key"
+            android:value="YOUR_APPLOVIN_KEY" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
