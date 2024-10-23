@@ -1,8 +1,43 @@
+import 'package:flutter/widgets.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 class AdMobAds {
   InterstitialAd? _interstitialAd;
   bool _isAdLoaded = false;
+  BannerAd? _bannerAd;
+
+  // Initialize Banner Ad
+  void loadBannerAd() {
+    _bannerAd = BannerAd(
+      adUnitId:
+          'ca-app-pub-5080833301669041/8364859227', // Replace with your banner ad unit ID
+      size: AdSize.banner, // You can choose other sizes like AdSize.largeBanner
+      request: AdRequest(),
+      listener: BannerAdListener(
+        onAdLoaded: (Ad ad) {
+          print('Banner Ad loaded.');
+        },
+        onAdFailedToLoad: (Ad ad, LoadAdError error) {
+          print('Banner Ad failed to load: $error');
+          ad.dispose();
+        },
+      ),
+    )..load();
+  }
+
+  // Widget to display the banner ad
+  Widget getBannerAdWidget() {
+    if (_bannerAd != null) {
+      return Container(
+        width: _bannerAd!.size.width.toDouble(),
+        height: _bannerAd!.size.height.toDouble(),
+        child: AdWidget(ad: _bannerAd!),
+      );
+    } else {
+      return SizedBox
+          .shrink(); // Return an empty widget if banner is not loaded
+    }
+  }
 
   // Load the interstitial ad
   void loadInterstitialAd() {

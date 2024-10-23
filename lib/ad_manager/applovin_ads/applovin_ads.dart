@@ -53,3 +53,57 @@ class AppLovinInterstitialManager {
     return _isAdLoaded;
   }
 }
+
+class AppLovinBannerManager {
+  static const String _bannerAdUnitId = "YOUR_BANNER_AD_UNIT_ID";
+
+  void initializeBannerAd() {
+    AppLovinMax.initialize(
+      sdkKey: "YOUR_SDK_KEY",
+      onSdkInitialized: (config) {
+        print("AppLovin SDK for banners initialized.");
+        loadBannerAd();
+      },
+    );
+  }
+
+  void loadBannerAd() {
+    AppLovinMax.createBanner(_bannerAdUnitId,
+        AdViewPosition.bottomCenter, // You can choose top or bottom
+        size: BannerAdSize.banner);
+
+    AppLovinMax.setBannerListener((AppLovinAdListener event) {
+      switch (event) {
+        case AppLovinAdListener.bannerAdLoaded:
+          print("AppLovin Banner Ad loaded.");
+          break;
+        case AppLovinAdListener.bannerAdLoadFailed:
+          print("AppLovin Banner Ad failed to load.");
+          break;
+        case AppLovinAdListener.bannerAdClicked:
+          print("AppLovin Banner Ad clicked.");
+          break;
+        case AppLovinAdListener.bannerAdCollapsed:
+          print("AppLovin Banner Ad collapsed.");
+          break;
+        case AppLovinAdListener.bannerAdExpanded:
+          print("AppLovin Banner Ad expanded.");
+          break;
+        default:
+          break;
+      }
+    });
+  }
+
+  void hideBannerAd() {
+    AppLovinMax.hideBanner(_bannerAdUnitId);
+  }
+
+  void showBannerAd() {
+    AppLovinMax.showBanner(_bannerAdUnitId);
+  }
+
+  void removeBannerAd() {
+    AppLovinMax.destroyBanner(_bannerAdUnitId);
+  }
+}

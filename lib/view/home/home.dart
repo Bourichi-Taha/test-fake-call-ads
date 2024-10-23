@@ -32,41 +32,44 @@ class _HomeScreenState extends State<HomeScreen> {
       AppLovinInterstitialManager();
   final UnityAdsManager _unityAdsManager = UnityAdsManager();
   final FacebookAds _facebookAdsManager = FacebookAds();
+  final AppLovinBannerManager _bannerManager = AppLovinBannerManager();
+
   final AdMobAds _adMobManager = AdMobAds();
+
+  int _selectedAdNetwork = 0;
 
   @override
   void initState() {
     super.initState();
+    _adMobManager.loadBannerAd();
     _adManagerAppLovin.initializeAppLovin(); // Initialize AppLovin
     _unityAdsManager.initialize(); // Initialize Unity Ads
     _facebookAdsManager.initialize(); // Initialize Facebook Ads
+    _bannerManager.initializeBannerAd();
     _adMobManager.loadInterstitialAd(); // Load AdMob interstitial ad
+    _selectRandomAdNetwork(); // Select a random banner ad network to display
   }
 
-  // Function to randomly pick and show one ad after 4 clicks
-  // void _showRandomAd() {
-  //   int randomAd = Random().nextInt(4); // Random number between 0 and 3
-  //   switch (randomAd) {
-  //     case 0:
-  //       print("Showing AdMob Ad");
-  //       _adMobManager.showInterstitialAd(); // Show AdMob Ad
-  //       break;
-  //     case 1:
-  //       //print("Showing AppLovin Ad");
-  //       //_adManagerAppLovin.showInterstitialAd(); // Show AppLovin Ad
-  //       break;
-  //     case 2:
-  //       print("Showing Facebook Ad");
-  //       _facebookAdsManager.handleClickfb(); // Show Facebook Ad
-  //       break;
-  //     case 3:
-  //       print("Showing Unity Ad");
-  //       _unityAdsManager.showInterstitialAd(); // Show Unity Ad
-  //       break;
-  //     default:
-  //       print("No Ad to show.");
-  //   }
-  // }
+// Function to select a random ad network for banner ads
+  void _selectRandomAdNetwork() {
+    Random random = Random();
+    _selectedAdNetwork =
+        random.nextInt(3); // 0 = AdMob, 1 = Facebook, 2 = Unity
+  }
+
+  // Function to show the selected banner ad
+  Widget _getSelectedBannerAd() {
+    switch (_selectedAdNetwork) {
+      case 0:
+        return _adMobManager.getBannerAdWidget();
+      case 1:
+        return _facebookAdsManager.loadBannerAd();
+      case 2:
+        return _unityAdsManager.loadBannerAd();
+      default:
+        return SizedBox.shrink(); // Return an empty widget if no ad is selected
+    }
+  }
 
   // Function to show ads in the specified sequence: AdMob -> Facebook -> Unity -> AppLovin
   void _showSequentialAd() {
@@ -117,6 +120,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   void dispose() {
+    _bannerManager.removeBannerAd();
     super.dispose();
   }
 
@@ -303,6 +307,10 @@ class _HomeScreenState extends State<HomeScreen> {
                               );
                             }),
                       ),
+                      // _adMobManager.getBannerAdWidget(),
+                      // _facebookAdsManager.loadBannerAd(),
+                      // _unityAdsManager.loadBannerAd(),
+                      _getSelectedBannerAd(),
                     ],
                   ),
                 ),

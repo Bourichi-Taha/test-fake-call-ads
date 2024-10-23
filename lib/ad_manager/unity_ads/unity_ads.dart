@@ -1,3 +1,4 @@
+import 'package:flutter/widgets.dart';
 import 'package:unity_ads_plugin/unity_ads_plugin.dart';
 
 class UnityAdsManager {
@@ -57,6 +58,20 @@ class UnityAdsManager {
     } else {
       print("Unity Interstitial ad is not ready yet.");
     }
+  }
+
+  // Load Banner Ad
+  Widget loadBannerAd() {
+    return UnityBannerAd(
+      placementId: "banner", // Replace with your Banner Placement ID
+      onLoad: (placementId) => print("Unity Banner Ad loaded: $placementId"),
+      onFailed: (placementId, error, message) =>
+          print("Unity Banner Ad failed to load: $message"),
+      onClick: (placementId) => print("Unity Banner Ad clicked: $placementId"),
+      //onImpression: (placementId) =>
+      // print("Unity Banner Ad impression: $placementId"),
+      size: BannerSize.standard, // Can be 'banner', 'leaderboard', 'medium'
+    );
   }
 
   // Check if the ad is ready
