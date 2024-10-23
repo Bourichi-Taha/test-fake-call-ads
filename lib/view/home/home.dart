@@ -33,7 +33,6 @@ class _HomeScreenState extends State<HomeScreen> {
   final UnityAdsManager _unityAdsManager = UnityAdsManager();
   final FacebookAds _facebookAdsManager = FacebookAds();
   final AppLovinBannerManager _bannerManager = AppLovinBannerManager();
-
   final AdMobAds _adMobManager = AdMobAds();
 
   int _selectedAdNetwork = 0;
