@@ -45,6 +45,9 @@ jobs:
       with:
         distribution: 'temurin' # You can choose the JDK distribution (like 'zulu' or 'adopt')
         java-version: '17'
+    
+    - name: java home
+      run: echo $JAVA_HOME
 
     - name: Install dependencies
       run: flutter pub get
