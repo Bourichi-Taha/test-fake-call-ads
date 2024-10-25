@@ -42,7 +42,7 @@
         <!-- AppLovin SDK metadata -->
         <meta-data
             android:name="applovin.sdk.key"
-            android:value="YOUR_APPLOVIN_KEY" />
+            android:value="Interstitial_Android" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

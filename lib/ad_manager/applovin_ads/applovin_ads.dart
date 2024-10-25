@@ -1,7 +1,7 @@
 import 'package:applovin_max/applovin_max.dart';
 
 class AppLovinInterstitialManager {
-  static const String _interstitialAdUnitId = "YOUR_AD_UNIT_ID";
+  static const String _interstitialAdUnitId = "Interstitial_Android";
   bool _isAdLoaded = false;
 
   void initializeAppLovin() {
@@ -55,7 +55,7 @@ class AppLovinInterstitialManager {
 }
 
 class AppLovinBannerManager {
-  static const String _bannerAdUnitId = "YOUR_BANNER_AD_UNIT_ID";
+  static const String _bannerAdUnitId = "Banner_Android";
 
   void initializeBannerAd() {
     AppLovinMax.initialize(
