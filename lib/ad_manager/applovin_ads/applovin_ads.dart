@@ -59,7 +59,7 @@ class AppLovinBannerManager {
 
   void initializeBannerAd() {
     AppLovinMax.initialize(
-      sdkKey: "YOUR_SDK_KEY",
+      sdkKey: "lv0C9ThoCyfGpyWxTbIaL9CW2ZnBnE7ShD_Ae4y8XEq41bsvIgfIMnmqfKC8PTTaz_BbB_betbZ654QrCA9PKI",
       onSdkInitialized: (config) {
         print("AppLovin SDK for banners initialized.");
         loadBannerAd();
