@@ -31,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final AppLovinInterstitialManager _adManagerAppLovin =
       AppLovinInterstitialManager();
   final UnityAdsManager _unityAdsManager = UnityAdsManager();
-  final FacebookAds _facebookAdsManager = FacebookAds();
+  // final FacebookAds _facebookAdsManager = FacebookAds();
   final AppLovinBannerManager _bannerManager = AppLovinBannerManager();
   final AdMobAds _adMobManager = AdMobAds();
 
@@ -43,7 +43,7 @@ class _HomeScreenState extends State<HomeScreen> {
     _adMobManager.loadBannerAd();
     _adManagerAppLovin.initializeAppLovin(); // Initialize AppLovin
     _unityAdsManager.initialize(); // Initialize Unity Ads
-    _facebookAdsManager.initialize(); // Initialize Facebook Ads
+    // _facebookAdsManager.initialize(); // Initialize Facebook Ads
     _bannerManager.initializeBannerAd();
     _adMobManager.loadInterstitialAd(); // Load AdMob interstitial ad
     _selectRandomAdNetwork(); // Select a random banner ad network to display
@@ -61,9 +61,9 @@ class _HomeScreenState extends State<HomeScreen> {
     switch (_selectedAdNetwork) {
       case 0:
         return _adMobManager.getBannerAdWidget();
+      // case 1:
+      //   return _facebookAdsManager.loadBannerAd();
       case 1:
-        return _facebookAdsManager.loadBannerAd();
-      case 2:
         return _unityAdsManager.loadBannerAd();
       default:
         return const SizedBox.shrink(); // Return an empty widget if no ad is selected
@@ -80,13 +80,13 @@ class _HomeScreenState extends State<HomeScreen> {
           _adSequenceIndex = 1; // Move to Facebook for next ad
         }
         break;
-      case 1:
-        // Show Facebook Ad
-        if (_facebookAdsManager.isAdReady()) {
-          _facebookAdsManager.showInterstitialAd();
-          _adSequenceIndex = 2; // Move to Unity for next ad
-        }
-        break;
+      // case 1:
+      //   // Show Facebook Ad
+      //   if (_facebookAdsManager.isAdReady()) {
+      //     _facebookAdsManager.showInterstitialAd();
+      //     _adSequenceIndex = 2; // Move to Unity for next ad
+      //   }
+      //   break;
       case 2:
         // Show Unity Ad
         if (_unityAdsManager.isAdReady()) {
