@@ -17,20 +17,20 @@ class AppLovinInterstitialManager {
   void loadInterstitialAd() {
     AppLovinMax.loadInterstitial(_interstitialAdUnitId);
 
-    AppLovinMax.setInterstitialListener((event, adData) {
+    AppLovinMax.setInterstitialListener((AppLovinAdListener event) {
       switch (event) {
-        case MaxAdEvent.loaded:
+        case AppLovinAdListener.interstitialLoaded:
           print("AppLovin Interstitial Ad loaded.");
           _isAdLoaded = true;
           break;
-        case MaxAdEvent.loadFailed:
+        case AppLovinAdListener.interstitialLoadFailed:
           print("AppLovin Interstitial Ad failed to load.");
           _isAdLoaded = false;
           break;
-        case MaxAdEvent.adDisplayed:
+        case AppLovinAdListener.interstitialDisplayed:
           print("AppLovin Interstitial Ad displayed.");
           break;
-        case MaxAdEvent.adHidden:
+        case AppLovinAdListener.interstitialAdHidden:
           print("AppLovin Interstitial Ad hidden.");
           loadInterstitialAd(); // Reload the ad after it is closed
           break;
@@ -68,27 +68,25 @@ class AppLovinBannerManager {
   }
 
   void loadBannerAd() {
-    AppLovinMax.createBanner(
-      _bannerAdUnitId,
-      AdViewPosition.bottomCenter, // You can choose top or bottom
-      size: BannerAdSize.banner,
-    );
+    AppLovinMax.createBanner(_bannerAdUnitId,
+        AdViewPosition.bottomCenter, // You can choose top or bottom
+        size: BannerAdSize.banner);
 
-    AppLovinMax.setBannerListener((event, adData) {
+    AppLovinMax.setBannerListener((AppLovinAdListener event) {
       switch (event) {
-        case MaxAdEvent.loaded:
+        case AppLovinAdListener.bannerAdLoaded:
           print("AppLovin Banner Ad loaded.");
           break;
-        case MaxAdEvent.loadFailed:
+        case AppLovinAdListener.bannerAdLoadFailed:
           print("AppLovin Banner Ad failed to load.");
           break;
-        case MaxAdEvent.clicked:
+        case AppLovinAdListener.bannerAdClicked:
           print("AppLovin Banner Ad clicked.");
           break;
-        case MaxAdEvent.adCollapsed:
+        case AppLovinAdListener.bannerAdCollapsed:
           print("AppLovin Banner Ad collapsed.");
           break;
-        case MaxAdEvent.adExpanded:
+        case AppLovinAdListener.bannerAdExpanded:
           print("AppLovin Banner Ad expanded.");
           break;
         default:
