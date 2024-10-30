@@ -12,7 +12,6 @@
 
 import 'dart:convert';
 import 'dart:io';
-import 'package:fakecall/ad_manager/unity_ads/unity_ads.dart';
 import 'package:fakecall/model/data.dart';
 import 'package:fakecall/model_view/data_provider.dart';
 import 'package:fakecall/view/brand.dart';

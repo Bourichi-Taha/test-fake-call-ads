@@ -12,7 +12,7 @@ class AdMobAds {
       adUnitId:
           'ca-app-pub-5080833301669041/8364859227', // Replace with your banner ad unit ID
       size: AdSize.banner, // You can choose other sizes like AdSize.largeBanner
-      request: AdRequest(),
+      request: const AdRequest(),
       listener: BannerAdListener(
         onAdLoaded: (Ad ad) {
           print('Banner Ad loaded.');
@@ -28,13 +28,13 @@ class AdMobAds {
   // Widget to display the banner ad
   Widget getBannerAdWidget() {
     if (_bannerAd != null) {
-      return Container(
+      return SizedBox(
         width: _bannerAd!.size.width.toDouble(),
         height: _bannerAd!.size.height.toDouble(),
         child: AdWidget(ad: _bannerAd!),
       );
     } else {
-      return SizedBox
+      return const SizedBox
           .shrink(); // Return an empty widget if banner is not loaded
     }
   }
@@ -43,7 +43,7 @@ class AdMobAds {
   void loadInterstitialAd() {
     InterstitialAd.load(
       adUnitId: 'ca-app-pub-5080833301669041/8364859227', // Test ad unit ID
-      request: AdRequest(), // No need for testDevices here
+      request: const AdRequest(), // No need for testDevices here
       adLoadCallback: InterstitialAdLoadCallback(
         onAdLoaded: (InterstitialAd ad) {
           print('Interstitial Ad loaded.');

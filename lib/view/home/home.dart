@@ -66,7 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
       case 2:
         return _unityAdsManager.loadBannerAd();
       default:
-        return SizedBox.shrink(); // Return an empty widget if no ad is selected
+        return const SizedBox.shrink(); // Return an empty widget if no ad is selected
     }
   }
 
