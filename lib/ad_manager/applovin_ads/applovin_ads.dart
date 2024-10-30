@@ -1,12 +1,12 @@
 import 'package:applovin_max/applovin_max.dart';
 
 class AppLovinInterstitialManager {
-  static const String _interstitialAdUnitId = "Interstitial_Android";
+  static const String _interstitialAdUnitId = "26d512ea6876f2ec";
   bool _isAdLoaded = false;
 
   void initializeAppLovin() {
     AppLovinMax.initialize(
-      sdkKey: "",
+      sdkKey: "lv0C9ThoCyfGpyWxTbIaL9CW2ZnBnE7ShD_Ae4y8XEq41bsvIgfIMnmqfKC8PTTaz_BbB_betbZ654QrCA9PKI",
       onSdkInitialized: (config) {
         print("AppLovin SDK initialized.");
         loadInterstitialAd();
@@ -55,7 +55,7 @@ class AppLovinInterstitialManager {
 }
 
 class AppLovinBannerManager {
-  static const String _bannerAdUnitId = "Banner_Android";
+  static const String _bannerAdUnitId = "727ca3a0e2d391e8";
 
   void initializeBannerAd() {
     AppLovinMax.initialize(

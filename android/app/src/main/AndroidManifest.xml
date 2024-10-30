@@ -42,7 +42,7 @@
         <!-- AppLovin SDK metadata -->
         <meta-data
             android:name="applovin.sdk.key"
-            android:value="Interstitial_Android" />
+            android:value="lv0C9ThoCyfGpyWxTbIaL9CW2ZnBnE7ShD_Ae4y8XEq41bsvIgfIMnmqfKC8PTTaz_BbB_betbZ654QrCA9PKI" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
